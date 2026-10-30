@@ -1,4 +1,4 @@
-# 🎵 CacheTune — Full Ecosystem Build (Android App & Docker Engine)
+#  CacheTune — Full Ecosystem Build (Android App & Docker Engine)
 
 Welcome to **CacheTune**, a high-performance lossless music streaming ecosystem featuring a **1:1 YouTube Music Native Android App** (Kotlin + Jetpack Compose) and an automated **Docker FairPlay CBCS Decryption Engine**.
 
@@ -40,7 +40,7 @@ Cache-Tune-APK_Build/
 
 ---
 
-## 🚀 Step-by-Step Initialization Procedure
+##  Step-by-Step Initialization Procedure
 
 Follow this guide to get the complete system running from scratch.
 
@@ -141,7 +141,7 @@ Open the CacheTune app on your phone and tap the **Config** tab (bottom right):
 
 ---
 
-## 🔒 Security & Privacy
+##  Security & Privacy
 
 - **No Secrets in Repo**: All personal credentials, user tokens, cookies, and database files are excluded via `.gitignore`.
 - **Client-Side Encryption**: Authentication credentials entered in the mobile app are encrypted locally using Android KeyStore and AES-256.
@@ -149,7 +149,7 @@ Open the CacheTune app on your phone and tap the **Config** tab (bottom right):
 
 ---
 
-## 🙏 Credits & Acknowledgements
+##  Credits & Acknowledgements
 
 Special thanks and full credit to [**zhaarey**](https://github.com/zhaarey) ([https://github.com/zhaarey](https://github.com/zhaarey)) for their pioneering research, implementation, and open-source contributions to the Apple Music downloader and FairPlay decryption wrapper components utilized in the lossless decryption pipeline.
 
