@@ -1,24 +1,6 @@
 version: '3.8'
 
 services:
-  db:
-    image: postgres:15-alpine
-    container_name: cachetune_db
-    environment:
-      POSTGRES_USER: ${POSTGRES_USER:-cachetune}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-cachetune}
-      POSTGRES_DB: ${POSTGRES_DB:-cachetune_db}
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    ports:
-      - "5432:5432"
-    restart: unless-stopped
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-cachetune} -d ${POSTGRES_DB:-cachetune_db}"]
-      interval: 3s
-      timeout: 3s
-      retries: 5
-
   backend:
     build:
       context: .
@@ -42,10 +24,7 @@ services:
     environment:
       - HOST=0.0.0.0
       - PORT=8000
-      - DATABASE_URL=postgresql+psycopg2://${POSTGRES_USER:-cachetune}:${POSTGRES_PASSWORD:-cachetune}@db:5432/${POSTGRES_DB:-cachetune_db}
-    depends_on:
-      db:
-        condition: service_healthy
+      - DATABASE_URL=sqlite:///./backend/cachetune.db
 
   wrapper:
     image: ghcr.io/worldobservationlog/wrapper:local
@@ -56,9 +35,3 @@ services:
       - "10020:10020"
       - "20020:20020"
       - "30020:30020"
-    environment:
-      - USERNAME=${APPLE_USERNAME:-}
-      - PASSWORD=${APPLE_PASSWORD:-}
-
-volumes:
-  postgres_data:

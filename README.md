@@ -149,6 +149,12 @@ Open the CacheTune app on your phone and tap the **Config** tab (bottom right):
 
 ---
 
+## 🙏 Credits & Acknowledgements
+
+Special thanks and full credit to [**zhaarey**](https://github.com/zhaarey) ([https://github.com/zhaarey](https://github.com/zhaarey)) for their pioneering research, implementation, and open-source contributions to the Apple Music downloader and FairPlay decryption wrapper components utilized in the lossless decryption pipeline.
+
+---
+
 ## 📄 License
 
 Copyright © 2025 CacheTune. All Rights Reserved.  

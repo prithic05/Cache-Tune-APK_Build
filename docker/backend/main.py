@@ -33,7 +33,7 @@ async def lifespan(app: FastAPI):
     Base.metadata.create_all(bind=engine)
     from backend.db.database import ensure_schema_migrations
     ensure_schema_migrations(engine)
-    print("[Backend] PostgreSQL tables and migrations ensured.")
+    print("[Backend] Database ready.")
     print(f"[Backend] Cache dir: {CACHE_DIR}")
     print(f"[Backend] Downloads dir: {DOWNLOADS_DIR}")
     
