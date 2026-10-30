@@ -1,0 +1,24 @@
+services:
+  wrapper:
+    image: ghcr.io/worldobservationlog/wrapper:local
+    privileged: true
+    # We map to the host's /var/run/docker.sock indirectly via the backend's mount
+    # Wait, the wrapper container itself doesn't need docker.sock. It just needs its ports exposed dynamically.
+    ports:
+      - "10020"
+      - "20020"
+      - "30020"
+    volumes:
+      # Use a unique local directory per project, but since it's dynamic, we might just let Docker create a named volume
+      - data_vol:/app/rootfs/data
+    restart: "no"
+    # Credentials will be injected via environment variables when calling docker compose up
+    # We do not use the -L user:pass flag. The image must support loading from env or we inject it into a file.
+    # Wait, the original `wrapper` entrypoint takes `-L user:pass`.
+    # To avoid command line leaks, we will pass them via environment variables and wrap the entrypoint.
+    entrypoint: ["/bin/sh", "-c", "./wrapper -L \"${APPLE_USERNAME}:${APPLE_PASSWORD}\" -H 0.0.0.0"]
+    labels:
+      - "com.cachetune.service=apple-wrapper"
+
+volumes:
+  data_vol:

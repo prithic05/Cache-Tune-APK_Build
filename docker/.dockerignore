@@ -1,0 +1,9 @@
+﻿project_env/
+build/node_modules/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.git/
+cache/
+downloads/

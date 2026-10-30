@@ -1,0 +1,11 @@
+{
+    "accept": "*/*",
+    "accept-language": "en-US,en;q=0.9",
+    "authorization": "",
+    "cookie": "SOCS=CAI",
+    "origin": "https://music.youtube.com",
+    "referer": "https://music.youtube.com/",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+    "x-goog-authuser": "0",
+    "x-origin": "https://music.youtube.com"
+}

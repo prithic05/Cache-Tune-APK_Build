@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cache Tune</string>
+    <string name="search_hint">Search Apple Music &amp; Lossless tracks...</string>
+    <string name="recommendations">Recommended for You</string>
+    <string name="quick_picks">Quick Picks</string>
+    <string name="trending">Trending Now</string>
+    <string name="lyrics">Lyrics</string>
+    <string name="queue">Up Next</string>
+    <string name="lossless">Lossless</string>
+    <string name="hires_lossless">Hi-Res Lossless 24-bit/192kHz</string>
+</resources>

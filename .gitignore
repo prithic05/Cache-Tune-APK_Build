@@ -1,0 +1,56 @@
+# Secrets & Environment (NEVER COMMIT)
+.env
+*.env
+.env.*
+!.env.example
+
+# Credentials & Personal Tokens
+docker/yt-music/browser.json
+docker/yt-music/oauth.json
+docker/yt-music/oauth_credentials.json
+docker/yt-music/curl.txt
+docker/Downloader/apple-music-downloader/config.yaml
+
+# Wrapper Rootfs & Account SQLite DBs (NEVER COMMIT)
+docker/Downloader/wrapper/rootfs/
+docker/Downloader/wrapper/build/
+docker/Downloader/temp_sessions/
+*.sqlitedb
+*.sqlitedb-wal
+*.sqlitedb-shm
+
+# Databases
+*.db
+docker/backend/*.db
+
+# Cache & Download directories
+cache/
+downloads/
+docker/cache/
+docker/downloads/
+docker/Downloader/cache/
+docker/Downloader/downloads/
+
+# Python
+__pycache__/
+*.py[cod]
+project_env/
+venv/
+.venv/
+
+# Android Build Outputs & IDE
+android/.gradle/
+android/build/
+android/app/build/
+android/app/.cxx/
+android/.idea/
+android/.kotlin/
+android/local.properties
+android/local.properties*
+*.iml
+
+# OS & Temp
+.DS_Store
+Thumbs.db
+desktop.ini
+*.log
